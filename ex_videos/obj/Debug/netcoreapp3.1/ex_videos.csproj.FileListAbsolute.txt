@@ -1,0 +1,13 @@
+C:\Users\franc\source\repos\ex_videos\ex_videos\bin\Debug\netcoreapp3.1\ex_videos.exe
+C:\Users\franc\source\repos\ex_videos\ex_videos\bin\Debug\netcoreapp3.1\ex_videos.deps.json
+C:\Users\franc\source\repos\ex_videos\ex_videos\bin\Debug\netcoreapp3.1\ex_videos.runtimeconfig.json
+C:\Users\franc\source\repos\ex_videos\ex_videos\bin\Debug\netcoreapp3.1\ex_videos.runtimeconfig.dev.json
+C:\Users\franc\source\repos\ex_videos\ex_videos\bin\Debug\netcoreapp3.1\ex_videos.dll
+C:\Users\franc\source\repos\ex_videos\ex_videos\bin\Debug\netcoreapp3.1\ex_videos.pdb
+C:\Users\franc\source\repos\ex_videos\ex_videos\obj\Debug\netcoreapp3.1\ex_videos.csprojAssemblyReference.cache
+C:\Users\franc\source\repos\ex_videos\ex_videos\obj\Debug\netcoreapp3.1\ex_videos.AssemblyInfoInputs.cache
+C:\Users\franc\source\repos\ex_videos\ex_videos\obj\Debug\netcoreapp3.1\ex_videos.AssemblyInfo.cs
+C:\Users\franc\source\repos\ex_videos\ex_videos\obj\Debug\netcoreapp3.1\ex_videos.csproj.CoreCompileInputs.cache
+C:\Users\franc\source\repos\ex_videos\ex_videos\obj\Debug\netcoreapp3.1\ex_videos.dll
+C:\Users\franc\source\repos\ex_videos\ex_videos\obj\Debug\netcoreapp3.1\ex_videos.pdb
+C:\Users\franc\source\repos\ex_videos\ex_videos\obj\Debug\netcoreapp3.1\ex_videos.genruntimeconfig.cache
