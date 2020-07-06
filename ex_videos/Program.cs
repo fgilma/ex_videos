@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace pruebas
+namespace ex_videos
 {
     class Program
     {
-        enum repro { Netflix, Play, Pause, Stop };
-
         /********************************************************************/
         // Funcion que indica si hay espacios entre los datos enviados
         /********************************************************************/
@@ -40,29 +38,29 @@ namespace pruebas
         /********************************************************************/
         // Menú reproducir, pausar y parar videos
         /*******************************************************************/
-        static bool MenuRepro(repro repro1, string titulo, string accion)
+        static bool MenuRepro(EnumRepro.repro repro1, string titulo, string accion)
         {
             Console.Clear();
             Console.WriteLine("  " + titulo);
             Console.WriteLine("==========================");
             Console.Write(repro1.ToString() + accion);
             Console.WriteLine();
-            Console.WriteLine("\n1.Pulse <" + repro.Play.ToString() + ">");
-            Console.WriteLine("2.Pulse <" + repro.Pause.ToString() + ">");
-            Console.WriteLine("3.Pulse <" + repro.Stop.ToString() + ">");
+            Console.WriteLine("\n1.Pulse <" + EnumRepro.repro.Play.ToString() + ">");
+            Console.WriteLine("2.Pulse <" + EnumRepro.repro.Pause.ToString() + ">");
+            Console.WriteLine("3.Pulse <" + EnumRepro.repro.Stop.ToString() + ">");
             Console.WriteLine("4.Volver al menu anterior.");
             Console.Write("\nSeleccione una de las opciones: ");
 
             switch (Console.ReadLine())
             {
                 case "1":
-                    MenuRepro(repro.Play, titulo, ", reproduciendo video!!!");
+                    MenuRepro(EnumRepro.repro.Play, titulo, ", reproduciendo video!!!");
                     return true;
                 case "2":
-                    MenuRepro(repro.Pause, titulo, ", pausando video!!!");
+                    MenuRepro(EnumRepro.repro.Pause, titulo, ", pausando video!!!");
                     return true;
                 case "3":
-                    MenuRepro(repro.Stop, titulo, ", parando video!!!");
+                    MenuRepro(EnumRepro.repro.Stop, titulo, ", parando video!!!");
                     return true;
                 case "4":
                     return false;
@@ -119,7 +117,7 @@ namespace pruebas
                     {
                         try
                         {
-                            sel2 = MenuRepro(repro.Netflix, user.listaVids[indice].titulo.ToUpper(), "");
+                            sel2 = MenuRepro(EnumRepro.repro.Netflix, user.listaVids[indice].titulo.ToUpper(), "");
                         }
 
                         catch (Exception e)
@@ -358,83 +356,5 @@ namespace pruebas
                 }
             }
         }
-    }
-    /****************************************************************/
-    // Clase Video
-    /****************************************************************/
-    class Video
-    {
-        //campos
-        public string url { get; set; }
-        public string titulo { get; set; }
-        public List<String> tags = new List<String>();
-        //lista de videos
-        public static List<Video> listaVids = new List<Video>();
-
-        //Constructor clase video
-        public Video(string url, string titulo)
-        {
-            this.url = url;
-            this.titulo = titulo;
-            listaVids.Add(this);
-        }
-        // añada tags a lista
-        public void addTag(string tag)
-        {
-            this.tags.Add(tag);
-        }
-    }
-    /****************************************************************/
-    // Clase Usuario
-    /****************************************************************/
-    class Usuario
-    {
-        //Campos
-        public string user { get; set; }
-        public string nombre { get; set; }
-        public string apellido { get; set; }
-        public string password { get; set; }
-        public DateTime fechaRegistro { get; set; }
-        //lista de videos de cada usuario
-        public List<Video> listaVids = new List<Video>();
-        //lista de usuarios
-        public static List<Usuario> listaUsers = new List<Usuario>();
-
-        //Constructor clase usuario
-        public Usuario(string user, string nombre, string apellido, string password)
-        {
-            this.user = user;
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.password = password;
-            this.fechaRegistro = DateTime.Now;
-            listaUsers.Add(this);
-        }
-
-        // crea videos
-        public void crea(string url, string titulo)
-        {
-            Video video1 = new Video(url, titulo);
-            listaVids.Add(video1);
-
-        }
-        //ver lista videos
-        public int lista()
-        {
-            int indice = 0;
-            if (listaVids.Count == 0)
-            {
-                return indice;
-            }
-            else
-            {
-                foreach (var i in listaVids)
-                {
-                    Console.WriteLine((indice + 1) + ". " + i.titulo);
-                    indice++;
-                }
-                return indice;
-            }
-        }
-    }
+    }    
 }
